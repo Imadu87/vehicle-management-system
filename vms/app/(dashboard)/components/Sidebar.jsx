@@ -2,10 +2,19 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import menuItems from "./SidebarItems";
 
 export default function Sidebar() {
   const [openMenu, setOpenMenu] = useState(null);
+  const router = useRouter();
+
+  const handleMenuClick = (item, index) => {
+    setOpenMenu(openMenu === index ? null : index);
+    if (item.link) {
+      router.push(item.link);
+    }
+  };
 
   return (
     <aside
@@ -20,7 +29,7 @@ export default function Sidebar() {
         {menuItems.map((item, index) => (
           <div key={index} className="flex flex-col">
             <button
-              onClick={() => setOpenMenu(openMenu === index ? null : index)}
+              onClick={() => handleMenuClick(item, index)}
               className="group flex items-center gap-3 py-3 px-4 rounded-lg relative text-left transition-all duration-300"
             >
               <Image src={item.icon} alt={item.name} width={22} height={22} />

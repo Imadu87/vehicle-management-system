@@ -5,19 +5,19 @@ import vehicleIcon from "@/public/images/vehicle.png";
 import settingIcon from "@/public/images/setting.png";
 
 const menuItems = [
-  { name: "Dashboard", icon: dashboardIcon, link: "/#" },
-  { name: "User", icon: userIcon, link: "/#" },
+  { name: "Dashboard", icon: dashboardIcon, link: "/" },
+  { name: "User", icon: userIcon, link: "/user" },
   {
     name: "Driver",
     icon: driverIcon,
     link: "/getAllDriver",
     subItems: [
       { name: "All Drivers", link: "/getAllDriver" },
-      { name: "Balance List", link: "/#" },
+      { name: "Balance List", link: "/driver/balane" },
     ],
   },
-  { name: "Vehicle", icon: vehicleIcon, link: "/#" },
-  { name: "Setting", icon: settingIcon, link: "/#" },
+  { name: "Vehicle", icon: vehicleIcon, link: "/vehicle" },
+  { name: "Setting", icon: settingIcon, link: "/setting" },
 ];
 
 export default menuItems;
