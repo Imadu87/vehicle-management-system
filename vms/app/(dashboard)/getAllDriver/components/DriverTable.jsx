@@ -1,5 +1,5 @@
 import { FaEdit, FaTrash, FaCar } from "react-icons/fa";
-import tableData from "./data.js"
+import tableData from "./TableData.js"
 
 export default function Table() {
   return (

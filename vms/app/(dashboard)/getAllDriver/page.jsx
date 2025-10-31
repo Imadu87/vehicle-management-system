@@ -1,7 +1,18 @@
-import Pagination from "../components/getAllDriver/Pagination";
-import Table from "../components/getAllDriver/Table";
+"use client";
+import { useState } from "react";
+import Pagination from "./components/Pagination";
+import Table from "./components/DriverTable";
+import Modal from "@/app/(dashboard)/components/Modal.jsx";
+import AddDriverForm from "./components/AddDriverForm";
 
-export default function DriverTable() {
+export default function GetAllDriver() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // const handleAddDriver = (data) => {
+  //   console.log("Driver added:", data);
+  //   setIsModalOpen(false);
+  // };
+
   return (
     <div className="pt-20 md:ml-[260px] min-h-screen bg-[#F9FAFB] p-6">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6">
@@ -35,7 +46,10 @@ export default function DriverTable() {
           <button className="bg-[#38384A] text-white px-4 py-2 rounded-lg text-sm">
             Add Document
           </button>
-          <button className="bg-[#38384A] text-white px-4 py-2 rounded-lg text-sm">
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="bg-[#38384A] text-white px-4 py-2 rounded-lg text-sm"
+          >
             + Add Driver
           </button>
         </div>
@@ -43,6 +57,20 @@ export default function DriverTable() {
 
       <Table />
       <Pagination />
+
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title="Add Driver"
+      >
+        <AddDriverForm
+          onSubmit={(data) => {
+            console.log("Driver form:", data);
+            setIsModalOpen(false);
+          }}
+          onCancel={() => setIsModalOpen(false)}
+        />
+      </Modal>
     </div>
   );
 }
