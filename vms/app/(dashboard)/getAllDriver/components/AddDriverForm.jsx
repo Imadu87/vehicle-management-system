@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
-import flag from '@/public/images/Pakistan.png'
+import flag from "@/public/images/Pakistan.png";
 
 export default function AddDriverForm({ onSubmit, onCancel }) {
   const [formData, setFormData] = useState({
@@ -137,12 +137,7 @@ export default function AddDriverForm({ onSubmit, onCancel }) {
           </label>
           <div className="flex items-center border rounded-md px-2">
             <div className="flex items-center gap-1 border-r pr-2">
-              <Image
-                src={flag}
-                width={20}
-                height={14}
-                alt="PK"
-              />
+              <Image src={flag} width={20} height={14} alt="PK" />
               <span className="text-gray-600 text-sm">+92</span>
             </div>
             <input

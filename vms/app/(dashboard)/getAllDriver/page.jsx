@@ -7,12 +7,6 @@ import AddDriverForm from "./components/AddDriverForm";
 
 export default function GetAllDriver() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  // const handleAddDriver = (data) => {
-  //   console.log("Driver added:", data);
-  //   setIsModalOpen(false);
-  // };
-
   return (
     <div className="pt-20 md:ml-[260px] min-h-screen bg-[#F9FAFB] p-6">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6">
@@ -63,6 +57,7 @@ export default function GetAllDriver() {
         onClose={() => setIsModalOpen(false)}
         title="Add Driver"
       >
+        {/* <Form /> */}
         <AddDriverForm
           onSubmit={(data) => {
             console.log("Driver form:", data);
