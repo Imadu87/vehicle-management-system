@@ -29,7 +29,9 @@ export default function AddressForm({ onSubmit, onBack, onCancel }) {
       {/* Line 1 & Line 2 same row */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="text-sm font-medium">Building and Street (Line 1 of 2)</label>
+          <label className="text-sm font-medium">
+            Building and Street (Line 1 of 2)
+          </label>
           <input
             type="text"
             name="line1"
@@ -41,7 +43,9 @@ export default function AddressForm({ onSubmit, onBack, onCancel }) {
         </div>
 
         <div>
-          <label className="text-sm font-medium">Building and Street (Line 2 of 2)</label>
+          <label className="text-sm font-medium">
+            Building and Street (Line 2 of 2)
+          </label>
           <input
             type="text"
             name="line2"
@@ -122,14 +126,11 @@ export default function AddressForm({ onSubmit, onBack, onCancel }) {
       {/* Upload */}
       <div>
         <label className="text-sm font-medium mb-1 block">Upload Images</label>
-        <div className="w-full border border-dashed rounded-md px-3 py-2 text-sm text-gray-600 bg-gray-50">
-          Upload image file
-        </div>
         <input
           type="file"
           name="image"
           onChange={handleChange}
-          className="mt-2 text-sm focus:outline-none"
+          className="mt-2 border border-dashed rounded-md px-3 py-2 text-sm text-gray-600 bg-gray-50"
         />
       </div>
 
