@@ -46,7 +46,7 @@ export default function AddDriverForm({ onSubmit, onCancel }) {
           <input
             type="text"
             name="name"
-            required
+            // required
             placeholder="Enter full name"
             value={formData.name}
             onChange={handleChange}
@@ -76,7 +76,7 @@ export default function AddDriverForm({ onSubmit, onCancel }) {
           <input
             type="text"
             name="nic"
-            required
+            // required
             placeholder="e.g. 35202-1234567-8"
             value={formData.nic}
             onChange={handleChange}
@@ -92,7 +92,7 @@ export default function AddDriverForm({ onSubmit, onCancel }) {
           <input
             type="text"
             name="license"
-            required
+            // required
             placeholder="e.g. DL-12345"
             value={formData.license}
             onChange={handleChange}
@@ -244,3 +244,8 @@ export default function AddDriverForm({ onSubmit, onCancel }) {
     </form>
   );
 }
+
+
+
+
+
