@@ -12,8 +12,8 @@ const menuItems = [
     icon: driverIcon,
     link: "/getAllDriver",
     subItems: [
-      { name: "All Drivers", link: "/getAllDriver" },
-      { name: "Balance List", link: "/driver/balane" },
+      { name: "All Drivers", icon: driverIcon, link: "/getAllDriver" },
+      { name: "Balance List", icon: driverIcon, link: "/driver/balane" },
     ],
   },
   { name: "Vehicle", icon: vehicleIcon, link: "/vehicle" },

@@ -26,7 +26,6 @@ export default function AddressForm({ onSubmit, onBack, onCancel }) {
     <form onSubmit={handleSubmit} className="space-y-6">
       <h2 className="text-lg font-semibold mb-2 text-gray-800">Address</h2>
 
-      {/* Line 1 & Line 2 same row */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label className="text-sm font-medium">
@@ -56,7 +55,6 @@ export default function AddressForm({ onSubmit, onBack, onCancel }) {
         </div>
       </div>
 
-      {/* Row 2 */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label className="text-sm font-medium">Town / City</label>
@@ -83,7 +81,6 @@ export default function AddressForm({ onSubmit, onBack, onCancel }) {
         </div>
       </div>
 
-      {/* Row 3 */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label className="text-sm font-medium">Post Code</label>

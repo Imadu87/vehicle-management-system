@@ -1,12 +1,11 @@
 "use client";
-import { useState } from "react";
 import Pagination from "./components/Pagination";
 import Table from "./components/DriverTable";
 import AddDriverModal from "./components/AddDriverModal";
 
 export default function GetAllDriver() {
   return (
-    <div className="pt-20 md:ml-[260px] min-h-screen bg-[#F9FAFB] p-6">
+    <div className="pt-20 ml-16 md:ml-60 min-h-screen bg-[#F9FAFB] p-6">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6">
         <div>
           <h1 className="text-2xl font-semibold text-gray-800">Driver</h1>
@@ -31,10 +30,10 @@ export default function GetAllDriver() {
         </div>
 
         <div className="flex flex-wrap gap-3 justify-end">
-          <button className="bg-[#38384A] text-white px-4 py-2 rounded-lg text-sm">
+          <button className="bg-[#38384A] hover:bg-black text-white px-4 py-2 rounded-lg text-sm">
             Assign Vehicle
           </button>
-          <button className="bg-[#38384A] text-white px-4 py-2 rounded-lg text-sm">
+          <button className="bg-[#38384A] hover:bg-black text-white px-4 py-2 rounded-lg text-sm">
             Add Document
           </button>
 
