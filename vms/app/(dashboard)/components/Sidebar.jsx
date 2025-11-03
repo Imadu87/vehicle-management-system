@@ -50,10 +50,8 @@ export default function Sidebar() {
               </span>
 
               {/* underline hover desktop */}
-              <span
-                className="hidden md:block absolute left-0 bottom-0 w-0 h-0.5 bg-white/60 translate-y-2 
-              transition-all duration-300 group-hover:w-full"
-              ></span>
+              <span className="hidden md:block absolute left-0 bottom-0 w-0 h-0.5 bg-white/60 translate-y-2 
+              transition-all duration-300 group-hover:w-full"></span>
             </button>
 
             {/* Sub Menu */}
@@ -70,20 +68,22 @@ export default function Sidebar() {
                         : "text-white/60 hover:text-white"
                     }`}
                   >
-                    {/* ✅ Mobile: submenu icons only */}
+
+                    {/* Mobile: submenu icons only */}
                     <Image
                       src={sub.icon}
                       alt={sub.name}
                       width={16}
                       height={16}
-                      className="block md:hidden"
+                      className="block md:hidden invert brightness-0"
                     />
 
-                    {/* ✅ Desktop: dot bullet */}
+                    {/*  Desktop: dot bullet */}
                     <span className="hidden md:inline w-1.5 h-1.5 rounded-full bg-white"></span>
 
-                    {/* ✅ Desktop text only */}
+                    {/*  Desktop text only */}
                     <span className="hidden md:inline">{sub.name}</span>
+
                   </Link>
                 ))}
               </div>
