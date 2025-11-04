@@ -50,26 +50,28 @@ export default function Sidebar() {
               </span>
 
               {/* underline hover desktop */}
-              <span className="hidden md:block absolute left-0 bottom-0 w-0 h-0.5 bg-white/60 translate-y-2 
-              transition-all duration-300 group-hover:w-full"></span>
+              <span
+                className="hidden md:block absolute left-0 bottom-0 w-0 h-0.5 bg-white/60 translate-y-2 
+              transition-all duration-300 group-hover:w-full"
+              ></span>
             </button>
 
             {/* Sub Menu */}
             {item.subItems && openMenu === index && (
-              <div className="flex flex-col pl-1 md:pl-10 mt-2 space-y-2">
+              <div
+                className="flex flex-col pl-1 md:pl-10 mt-2 space-y-2 
+  max-h-60 overflow-y-auto bg-inherit"
+              >
                 {item.subItems.map((sub, subIndex) => (
                   <Link
                     key={subIndex}
                     href={sub.link}
                     className={`flex items-center gap-0 md:gap-2 text-[14px] transition-all duration-200 
-                    justify-center md:justify-start ${
-                      subIndex === 0
-                        ? "text-white"
-                        : "text-white/60 hover:text-white"
-                    }`}
+        justify-center md:justify-start ${
+          subIndex === 0 ? "text-white" : "text-white/60 hover:text-white"
+        }`}
                   >
-
-                    {/* Mobile: submenu icons only */}
+                    {/* Mobile icons */}
                     <Image
                       src={sub.icon}
                       alt={sub.name}
@@ -78,12 +80,11 @@ export default function Sidebar() {
                       className="block md:hidden invert brightness-0"
                     />
 
-                    {/*  Desktop: dot bullet */}
+                    {/* Desktop bullet */}
                     <span className="hidden md:inline w-1.5 h-1.5 rounded-full bg-white"></span>
 
-                    {/*  Desktop text only */}
+                    {/* Desktop text */}
                     <span className="hidden md:inline">{sub.name}</span>
-
                   </Link>
                 ))}
               </div>

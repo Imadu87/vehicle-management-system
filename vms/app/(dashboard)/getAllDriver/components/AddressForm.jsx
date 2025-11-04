@@ -1,4 +1,6 @@
 "use client";
+import Buttons from "@/components/Buttons";
+import UploadFiles from "@/components/UploadFile";
 import { useState } from "react";
 
 export default function AddressForm({ onSubmit, onBack, onCancel }) {
@@ -121,42 +123,10 @@ export default function AddressForm({ onSubmit, onBack, onCancel }) {
       </div>
 
       {/* Upload */}
-      <div>
-        <label className="text-sm font-medium mb-1 block">Upload Images</label>
-        <input
-          type="file"
-          name="image"
-          onChange={handleChange}
-          className="mt-2 border border-dashed rounded-md px-3 py-2 text-sm text-gray-600 bg-gray-50"
-        />
-      </div>
+      <UploadFiles />
 
       {/* Buttons */}
-      <div className="flex justify-between">
-        <button
-          type="button"
-          onClick={onBack}
-          className="border px-4 py-2 rounded-md"
-        >
-          Back
-        </button>
-
-        <div className="flex gap-3">
-          <button
-            type="button"
-            onClick={onCancel}
-            className="border px-4 py-2 rounded-md"
-          >
-            Cancel
-          </button>
-          <button
-            type="submit"
-            className="bg-[#38384A] text-white px-4 py-2 rounded-md"
-          >
-            Submit
-          </button>
-        </div>
-      </div>
+      <Buttons onBack={onBack} onCancel={onCancel} onSubmit={onSubmit} />
     </form>
   );
 }
