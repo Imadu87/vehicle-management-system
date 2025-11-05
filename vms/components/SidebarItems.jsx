@@ -15,7 +15,7 @@ const menuItems = [
     link: "/getAllDriver",
     subItems: [
       { name: "All Drivers", icon: listIcon, link: "/getAllDriver" },
-      { name: "Balance List", icon: balanceIcon, link: "/driver/balane" },
+      { name: "Balance List", icon: balanceIcon, link: "/balance" },
     ],
   },
   { name: "Vehicle", icon: vehicleIcon, link: "/vehicle" },
@@ -24,9 +24,9 @@ const menuItems = [
     icon: settingIcon,
     subItems: [
       { name: "Companies", icon: dashboardIcon, link: "/Companies" },
-      { name: "Document Management", icon: dashboardIcon, link: "/Companies" },
-      { name: "Balance", icon: dashboardIcon, link: "/Companies" },
-      { name: "Car", icon: dashboardIcon, link: "/Companies" },
+      { name: "Document Management", icon: dashboardIcon, link: "/documentManagement" },
+      { name: "Balance", icon: dashboardIcon, link: "/balance" },
+      { name: "Car", icon: dashboardIcon, link: "/cars" },
       { name: "Manufactures", icon: dashboardIcon, link: "/Companies" },
       { name: "Models", icon: dashboardIcon, link: "/Companies" },
       { name: "Body Type", icon: dashboardIcon, link: "/Companies" },

@@ -1,4 +1,5 @@
 import AddCompanyModal from "@/app/(dashboard)/Companies/components/AddCompanyModal";
+import AddDocumentModal from "@/app/(dashboard)/documentManagement/components/AddDocumentModal";
 import AddDriverModal from "@/app/(dashboard)/getAllDriver/components/AddDriverModal";
 
 export default function Header({ title }) {
@@ -34,6 +35,27 @@ export default function Header({ title }) {
               className="border rounded-md px-3 py-2 text-sm w-full sm:w-[250px]"
             />
           )}
+          {title === "Document Management" && (
+            <input
+              type="text"
+              placeholder="Search by Document type"
+              className="border rounded-md px-3 py-2 text-sm w-full sm:w-[250px]"
+            />
+          )}
+          {title === "Balance" && (
+            <input
+              type="text"
+              placeholder="Search by Email"
+              className="border rounded-md px-3 py-2 text-sm w-full sm:w-[250px]"
+            />
+          )}
+          {title === "My Cars" && (
+            <input
+              type="text"
+              placeholder="Search by Manufacture"
+              className="border rounded-md px-3 py-2 text-sm w-full sm:w-[250px]"
+            />
+          )}
         </div>
 
         {title === "Driver" && (
@@ -49,12 +71,8 @@ export default function Header({ title }) {
             <AddDriverModal />
           </div>
         )}
-        {title === "Companies" && (
-        //   <button className="bg-[#38384A] hover:bg-black text-white px-4 py-2 rounded-lg text-sm">
-        //     + Add Company
-        //   </button>
-        <AddCompanyModal />
-        )}
+        {title === "Companies" && <AddCompanyModal />}
+        {title === "Document Management" && <AddDocumentModal />}
       </div>
     </>
   );
