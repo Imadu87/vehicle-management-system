@@ -1,3 +1,16 @@
 @import "tailwindcss";
 
 
+/* Hide scrollbar background */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Remove bg */
+}
+
+::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 5px;
+}

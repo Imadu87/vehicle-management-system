@@ -27,7 +27,7 @@ const menuItems = [
       { name: "Document Management", icon: dashboardIcon, link: "/documentManagement" },
       { name: "Balance", icon: dashboardIcon, link: "/balance" },
       { name: "Car", icon: dashboardIcon, link: "/cars" },
-      { name: "Manufactures", icon: dashboardIcon, link: "/Companies" },
+      { name: "Manufactures", icon: dashboardIcon, link: "/manufacturers" },
       { name: "Models", icon: dashboardIcon, link: "/Companies" },
       { name: "Body Type", icon: dashboardIcon, link: "/Companies" },
       { name: "Fuel Type", icon: dashboardIcon, link: "/Companies" },

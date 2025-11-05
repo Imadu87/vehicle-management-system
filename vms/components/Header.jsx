@@ -1,6 +1,7 @@
 import AddCompanyModal from "@/app/(dashboard)/Companies/components/AddCompanyModal";
 import AddDocumentModal from "@/app/(dashboard)/documentManagement/components/AddDocumentModal";
 import AddDriverModal from "@/app/(dashboard)/getAllDriver/components/AddDriverModal";
+import AddManufacturesModal from "@/app/(dashboard)/manufacturers/components/AddManufactures";
 
 export default function Header({ title }) {
   return (
@@ -56,6 +57,13 @@ export default function Header({ title }) {
               className="border rounded-md px-3 py-2 text-sm w-full sm:w-[250px]"
             />
           )}
+          {title === "Manufactures" && (
+            <input
+              type="text"
+              placeholder="Search by Manufacture"
+              className="border rounded-md px-3 py-2 text-sm w-full sm:w-[250px]"
+            />
+          )}
         </div>
 
         {title === "Driver" && (
@@ -73,6 +81,7 @@ export default function Header({ title }) {
         )}
         {title === "Companies" && <AddCompanyModal />}
         {title === "Document Management" && <AddDocumentModal />}
+        {title === "Manufactures" && <AddManufacturesModal />}
       </div>
     </>
   );

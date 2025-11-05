@@ -1,5 +1,6 @@
 "use client";
 import Buttons from "@/components/Buttons";
+import Status from "@/components/Status";
 import UploadFiles from "@/components/UploadFile";
 import { useState } from "react";
 
@@ -94,32 +95,8 @@ export default function AddressForm({ onSubmit, onBack, onCancel }) {
             className="w-full border rounded-md px-3 py-2 text-sm"
           />
         </div>
-
-        <div>
-          <label className="text-sm font-medium">Status</label>
-          <div className="flex items-center gap-4">
-            <label className="flex items-center gap-1 text-sm">
-              <input
-                type="radio"
-                name="status"
-                value="Active"
-                checked={form.status === "Active"}
-                onChange={handleChange}
-              />
-              Active
-            </label>
-            <label className="flex items-center gap-1 text-sm">
-              <input
-                type="radio"
-                name="status"
-                value="Inactive"
-                checked={form.status === "Inactive"}
-                onChange={handleChange}
-              />
-              Inactive
-            </label>
-          </div>
-        </div>
+        {/* Status  */}
+        <Status />
       </div>
 
       {/* Upload */}
